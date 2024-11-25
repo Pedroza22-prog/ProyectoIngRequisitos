@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobconect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="static/css/home.css"> <!-- Cambiado para apuntar al archivo CSS personalizado -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+
+  <!-- Navegación -->
+  <nav class="bg-white shadow-md fixed top-0 w-full z-20">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-2xl font-bold text-blue-600">Jobconect</div>
+      <div class="flex space-x-6 items-center">
+        <a href="/" class="flex items-center hover:text-blue-600">
+          <i class="lucide-home mr-2"></i> Inicio
+        </a>
+        <a href="/buscar" class="flex items-center hover:text-blue-600">
+          <i class="lucide-search mr-2"></i> Buscar
+        </a>
+        <a href="/perfil" class="flex items-center hover:text-blue-600">
+          <i class="lucide-user mr-2"></i> Mi Perfil
+        </a>
+        <a href="/ofertas" class="flex items-center hover:text-blue-600">
+          <i class="lucide-briefcase mr-2"></i> Ofertas
+        </a>
+        <a href="/ayuda" class="flex items-center hover:text-blue-600">
+          <i class="lucide-help-circle mr-2"></i> Ayuda
+        </a>
+        <a 
+          href="/perfil" 
+          class="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center hover:bg-blue-700"
+        >
+          <i class="lucide-log-in mr-2"></i> Iniciar Sesión
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner Principal -->
+  <header class="pt-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold mb-6">
+        Conéctate con las mejores oportunidades laborales y talentos en tecnología
+      </h1>
+      <p class="text-xl mb-8">
+        Encuentra tu próximo trabajo o el candidato perfecto para tu empresa
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a 
+          href="{% url 'registrar_usuario' %}" 
+          class="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100"
+        >
+          Registrarse
+        </a>
+        <a 
+          href="/buscar" 
+          class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-blue-600"
+        >
+          Explorar Oportunidades
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Secciones de Acción -->
+  <main class="container mx-auto px-4 py-12">
+    <section class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">Para Candidatos</h2>
+        <p class="mb-4">Descubre miles de oportunidades laborales en tecnología.</p>
+        <a 
+          href="/buscar-empleos" 
+          class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+        >
+          Buscar Empleos
+        </a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4 text-green-600">Para Empleadores</h2>
+        <p class="mb-4">Encuentra los mejores talentos para tu equipo.</p>
+        <a 
+          href="/publicar-oferta" 
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
+        >
+          Publicar Oferta
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-auto">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2024 Jobconect. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

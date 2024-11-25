@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jobConet_app',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_URL = 'login'  # redirige a la vista de inicio de sesion "login"
+
+# Redirige a la página de inicio después de un login exitoso
+LOGIN_REDIRECT_URL = 'lista_publicaciones'  # Cambia 'lista_publicaciones' por el nombre de tu vista
+
+
+LOGOUT_REDIRECT_URL = 'logout'  # Redirige a la vista de login después de cerrar sesión
+
+
+STATIC_URL = '/static/'  # URL para acceder a los archivos estáticos
