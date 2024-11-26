@@ -30,7 +30,7 @@ body {
 /* Título */
 h1 {
     text-align: center;
-    color: #1c1c85; /* Azul para el título */
+    color: #1D4ED8; /* Azul para el título */
     margin-bottom: 20px;
 }
 
@@ -51,7 +51,7 @@ label {
 input, textarea {
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; /* Gris claro para bordes */
+    border: 1px solid #000000; /* Gris claro para bordes */
     border-radius: 5px;
     font-size: 16px;
     width: 100%;

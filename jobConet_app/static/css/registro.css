@@ -19,8 +19,8 @@ body {
 
 /* Estilos para el encabezado (Bienvenida) */
 .welcome {
-    background-color: #1c1c85; /* Azul oscuro para el encabezado */
-    color: white;
+    background-color: rgb(230, 230, 221); /* Azul oscuro para el encabezado */
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -34,14 +34,15 @@ body {
 
 .welcome p {
     font-size: 1.2rem;
+    text-align: left;
 }
 
 /* Estilos para el contenedor principal */
 .container {
-    background-color: white;
+    background-color: rgb(230, 230, 221);
     padding: 3rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 9px 7pxrgba(99, 97, 97, 0.171);
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
@@ -49,9 +50,15 @@ body {
 
 /* Título principal */
 h1 {
+    text-align: left;
+    margin-bottom: 2rem;
+    color: rgb(29, 78, 216); /* Azul para el título del formulario */
+}
+
+h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #1c1c85; /* Azul para el título del formulario */
+    color: #000000;
 }
 
 /* Estilos para los campos de formulario */
@@ -70,20 +77,20 @@ h1 {
     width: 100%;
     border-radius: 0.5rem;
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.75rem;
     font-size: 1rem;
 }
 
 .form-control:focus {
-    border-color: #1c1c85; /* Azul para el borde del campo al estar enfocado */
+    border-color: #000000; /* Azul para el borde del campo al estar enfocado */
     outline: none;
 }
 
 /* Estilos para el botón de registro */
 .btn-primary {
-    background-color: #1c1c85; /* Azul para el botón */
+    background-color:#1D4ED8 ; /* Azul para el botón */
     border: none;
     padding: 0.75rem;
     width: 100%;
@@ -94,7 +101,7 @@ h1 {
 }
 
 .btn-primary:hover {
-    background-color: #16297a; /* Azul más oscuro al hacer hover */
+    background-color: #3f6be6; /* Azul más oscuro al hacer hover */
 }
 
 /* Estilo para los mensajes de error */
@@ -112,7 +119,7 @@ p {
 }
 
 a {
-    color: #1c1c85; /* Azul para los enlaces */
+    color: #2020ff; /* Azul para los enlaces */
     text-decoration: none;
 }
 

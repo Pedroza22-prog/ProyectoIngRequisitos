@@ -8,8 +8,8 @@
 /* Estilos globales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7; /* Gris de fondo */
-    color: #101010; /* Negro para el texto general */
+    background-color: #ffffff; /* Gris de fondo */
+    color: #000000; /* Negro para el texto general */
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,10 +19,10 @@ body {
 
 /* Estilos para el encabezado (Bienvenida) */
 .welcome {
-    background-color: #1c1c85; /* Azul para el encabezado */
-    color: white;
-    text-align: center;
-    padding: 2rem;
+    background-color: rgb(230, 230, 221); /* Blancoi para el encabezado */
+    color: rgb(0, 0, 0);
+    text-align:left;
+    padding: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -30,19 +30,21 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    color: #1D4ED8 ;
 }
 
 .welcome p {
     font-size: 1.2rem;
+    text-align: left;
 }
 
 /* Estilos para el contenedor principal */
 .container {
-    background-color: white;
+    background-color: rgb(230, 230, 221);
     padding: 3rem;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 80%;
     max-width: 400px;
     margin: 0 auto;
 }
@@ -51,7 +53,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #1c1c85; /* Azul para el título del formulario */
+    color: #000000; /* Azul para el título del formulario */
 }
 
 /* Estilos para los campos de formulario */
@@ -70,20 +72,20 @@ h2 {
     width: 100%;
     border-radius: 0.5rem;
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.75rem;
     font-size: 1rem;
 }
 
 .form-control:focus {
-    border-color: #1c1c85; /* Azul para el borde del campo al estar enfocado */
+    border-color: #1D4ED8; /* Azul para el borde del campo al estar enfocado */
     outline: none;
 }
 
 /* Estilos para el botón de inicio de sesión */
 .btn-primary {
-    background-color: #1c1c85; /* Azul para el botón */
+    background-color: #1D4ED8; /* Azul para el botón */
     border: none;
     padding: 0.75rem;
     width: 100%;
@@ -94,7 +96,7 @@ h2 {
 }
 
 .btn-primary:hover {
-    background-color: #16297a; /* Azul más oscuro al hacer hover */
+    background-color: #1D4ED8; /* Azul más oscuro al hacer hover */
 }
 
 /* Estilo para los mensajes de error */
@@ -112,7 +114,7 @@ p {
 }
 
 a {
-    color: #1c1c85; /* Azul para los enlaces */
+    color: #000000; /* Azul para los enlaces */
     text-decoration: none;
 }
 
