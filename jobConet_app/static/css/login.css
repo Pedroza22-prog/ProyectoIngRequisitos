@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 /* Estilos globales */
 body {
     font-family: 'Arial', sans-serif;
@@ -17,6 +18,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 /* Estilos para el encabezado (Bienvenida) */
 .welcome {
     background-color: rgb(230, 230, 221); /* Blancoi para el encabezado */
@@ -26,6 +29,7 @@ body {
     margin-bottom: 2rem;
 }
 
+
 .welcome h1 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -33,10 +37,12 @@ body {
     color: #1D4ED8 ;
 }
 
+
 .welcome p {
     font-size: 1.2rem;
     text-align: left;
 }
+
 
 /* Estilos para el contenedor principal */
 .container {
@@ -49,6 +55,7 @@ body {
     margin: 0 auto;
 }
 
+
 /* Título principal */
 h2 {
     text-align: center;
@@ -56,10 +63,12 @@ h2 {
     color: #000000; /* Azul para el título del formulario */
 }
 
+
 /* Estilos para los campos de formulario */
 .form-group {
     margin-bottom: 1.5rem; /* Espacio entre los campos */
 }
+
 
 .form-group label {
     font-weight: bold;
@@ -67,6 +76,7 @@ h2 {
     display: block;
     color: #101010; /* Color negro para las etiquetas */
 }
+
 
 .form-control {
     width: 100%;
@@ -78,10 +88,12 @@ h2 {
     font-size: 1rem;
 }
 
+
 .form-control:focus {
     border-color: #1D4ED8; /* Azul para el borde del campo al estar enfocado */
     outline: none;
 }
+
 
 /* Estilos para el botón de inicio de sesión */
 .btn-primary {
@@ -95,9 +107,11 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
+
 .btn-primary:hover {
     background-color: #1D4ED8; /* Azul más oscuro al hacer hover */
 }
+
 
 /* Estilo para los mensajes de error */
 .alert {
@@ -108,19 +122,23 @@ h2 {
     margin-top: 1rem;
 }
 
+
 /* Enlace de registro */
 p {
     text-align: center;
 }
+
 
 a {
     color: #000000; /* Azul para los enlaces */
     text-decoration: none;
 }
 
+
 a:hover {
     text-decoration: underline;
 }
+
 
 /* Estilos para el pie de página */
 .footer {

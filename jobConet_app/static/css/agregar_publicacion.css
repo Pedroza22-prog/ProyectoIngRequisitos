@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 /* Estilos del cuerpo */
 body {
     font-family: Arial, sans-serif;
@@ -27,6 +28,7 @@ body {
     border-radius: 8px;
 }
 
+
 /* Título */
 h1 {
     text-align: center;
@@ -34,11 +36,13 @@ h1 {
     margin-bottom: 20px;
 }
 
+
 /* Estilos del formulario */
 form {
     display: flex;
     flex-direction: column;
 }
+
 
 /* Etiquetas */
 label {
@@ -46,6 +50,7 @@ label {
     margin-bottom: 5px;
     color: #101010; /* Negro para las etiquetas */
 }
+
 
 /* Campos de entrada (input, textarea) */
 input, textarea {
@@ -58,10 +63,12 @@ input, textarea {
     box-sizing: border-box;
 }
 
+
 input:focus, textarea:focus {
     border-color: #1c1c85; /* Azul para el foco */
     outline: none;
 }
+
 
 /* Botón de enviar (Publicar) */
 button {
@@ -74,6 +81,7 @@ button {
     font-size: 16px;
     transition: background-color 0.3s;
 }
+
 
 button:hover {
     background-color: #16297a; /* Azul más oscuro al pasar el ratón */
@@ -89,9 +97,11 @@ a {
     font-size: 16px;
 }
 
+
 a:hover {
     text-decoration: underline;
 }
+
 
 /* Mensaje de alerta (en caso de error o éxito) */
 .message {

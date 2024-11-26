@@ -9,11 +9,13 @@
 </head>
 <body>
 
+
     <!-- Bienvenida en la parte superior -->
     <header class="welcome">
         <h1>Bienvenido a JobConet</h1>
         <p>Por favor, regístrate para crear una cuenta.</p>
     </header>
+
 
     <!-- Contenedor del formulario de registro -->
     <div class="container mt-5">
@@ -46,15 +48,18 @@
             <button type="submit" class="btn-primary">Registrar</button>
         </form>
 
+
         {% for message in messages %}
             <div class="alert alert-danger mt-3">{{ message }}</div>
         {% endfor %}
     </div>
 
+
     <!-- Pie de página -->
     <footer class="footer">
-        <p>&copy; 2024 JobConet. Todos los derechos reservados.</p>
+        <p>&copy; 2024 JobConet. Todos los derechos reservados. </p>
     </footer>
     
+
 </body>
 </html>
