@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobConnect - Explorar Oportunidades</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'jobConet_app/oportunidades.css' %}">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">JobConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'registrar_usuario' %}">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de encabezado -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Explorar Oportunidades</h1>
+        <p>Encuentra el trabajo que siempre has soñado</p>
+    </header>
+
+    <!-- Sección de búsqueda de trabajo -->
+    <section class="job-search">
+        <div class="container">
+            <h1 class="text-center mb-4">Encuentra tu trabajo ideal</h1>
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Puesto o palabra clave">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Ubicación">
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">Buscar trabajos</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección de categorías populares -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Categorías populares</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollador Web</h5>
+                        <p class="card-text">Ubicación: Remoto</p>
+                        <a href="#" class="btn btn-primary">Aplicar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseñador Gráfico</h5>
+                        <p class="card-text">Ubicación: Presencial, Madrid</p>
+                        <a href="#" class="btn btn-primary">Aplicar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Analista de Datos</h5>
+                        <p class="card-text">Ubicación: Híbrido</p>
+                        <a href="#" class="btn btn-primary">Aplicar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-4">
+        <p>&copy; 2024 JobConnect. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -11,6 +11,7 @@ from django.shortcuts import redirect
 from django.contrib.auth import logout
 from .forms import PublicacionForm  # Aquí se importa el formulario
 from django.shortcuts import get_object_or_404, redirect
+from .models import OfertaEmpleo
 
 
 #http://127.0.0.1:8000/
@@ -129,4 +130,31 @@ def perfil_usuario(request):
     usuario = request.user  # Obtiene el usuario autenticado
     return render(request, 'jobConet_app/perfil_usuario.html', {'usuario': usuario})
 
+def home(request):
+    """Vista para renderizar la página principal."""
+    return render(request, 'jobConet_app/index.html')  # Renderiza el archivo index.html
 
+def oportunidades(request):
+    return render(request, "jobConet_app/oportunidades.html")
+
+
+def buscar_empleo(request):
+    if request.method == 'POST':  # Verificar si es un formulario POST
+        puesto_palabra_clave = request.POST.get('puesto_palabra_clave', '').strip()  # Capturar "Puesto o palabra clave"
+        ubicacion = request.POST.get('ubicacion', '').strip()
+
+        # Verificar si hay datos y guardarlos
+        if puesto_palabra_clave or ubicacion:
+            BusquedaTrabajo.objects.create(
+                palabra_clave=puesto_palabra_clave,  # Guardar "Puesto o palabra clave"
+                ubicacion=ubicacion
+            )
+            print(f"Se guardó correctamente: Puesto o palabra clave - {puesto_palabra_clave}, Ubicación - {ubicacion}")
+        else:
+            print("No se guardó porque no se ingresaron datos.")
+
+    # Obtener las búsquedas recientes
+    busquedas = BusquedaTrabajo.objects.all().order_by('-fecha_busqueda')[:10]
+    print(f"Búsquedas recientes: {busquedas}")
+
+    return render(request, 'jobConet_app/buscar_empleo.html', {'busquedas': busquedas})
