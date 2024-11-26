@@ -1,105 +1,42 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Estilos personalizados para la barra de navegación */
+.navbar-custom {
+    background-color: #343a40;
+    padding: 10px;
 }
 
-h1 {
-    color: #2C3E50;
-    text-align: center;
-    margin-top: 20px;
+.navbar-custom .navbar-brand, 
+.navbar-custom .nav-link {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-p {
-    font-size: 1.1em;
-    line-height: 1.6;
+.navbar-custom .nav-link:hover {
+    color: #adb5bd;
 }
 
-strong {
-    color: #34495E;
-}
-
-/* Contenedor principal */
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* Contenedor principal del perfil */
+.profile-container {
+    background-color: #f8f9fa;
     padding: 20px;
-    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del enlace para volver a las publicaciones */
-.back-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #1c1c85;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.back-link:hover {
-    background-color: #1c1c85;
-}
-
-/* Estilos para la barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #1c1c85;
-    color: white;
-}
-
-.navbar .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.navbar .logo a{
-    text-decoration: none;
-    color: white;
-}
-
-.navbar .user-info {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .user-info a {
-    margin-left: 1rem;
-    color: white;
-    font-weight: bold;
-}
-
-/* Estilos del botón de cierre de sesión */
+/* Botón de cierre de sesión */
 .logout-button {
-    background-color: #E74C3C;
-    color: white;
-    padding: 5px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 20px;
-    width: 120px;
-    height: 50px;
+    display: block;
     text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #dc3545;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .logout-button:hover {
-    background-color: #C0392B;
+    background-color: #dc3545;
+    color: #ffffff;
+    text-decoration: none;
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Jobconect</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/editar-perfil.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Editar Perfil Profesional</h1>
+        
+        <form>
+            <div class="profile-header">
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <img src="{% static 'images/perfil.jpg' %}" alt="Foto de perfil" class="profile-pic mb-2">
+                        <button type="button" class="btn btn-outline-primary btn-sm">Cambiar foto</button>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="fullName" value="Juan Pérez">
+                        </div>
+                        <div class="mb-3">
+                            <label for="headline" class="form-label">Titular profesional</label>
+                            <input type="text" class="form-control" id="headline" value="Desarrollador Full Stack | Experto en JavaScript">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Experiencia Laboral</h3>
+            <div id="experienceList">
+                <div class="card mb-3 draggable-item">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <input type="text" class="form-control" placeholder="Cargo" value="Desarrollador Senior">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" placeholder="Empresa" value="Tech Solutions Inc.">
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col">
+                                <input type="date" class="form-control" value="2020-01-01">
+                            </div>
+                            <div class="col">
+                                <input type="date" class="form-control" value="2024-10-16">
+                            </div>
+                        </div>
+                        <textarea class="form-control" rows="3" placeholder="Descripción">Lideré el desarrollo de aplicaciones web utilizando React y Node.js.</textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-secondary mb-3">+ Añadir experiencia</button>
+
+            <h3>Educación</h3>
+            <div id="educationList">
+                <div class="card mb-3 draggable-item">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <input type="text" class="form-control" placeholder="Título" value="Ingeniería en Sistemas">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" placeholder="Institución" value="Universidad Tecnológica">
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col">
+                                <input type="date" class="form-control" value="2015-09-01">
+                            </div>
+                            <div class="col">
+                                <input type="date" class="form-control" value="2019-06-30">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-secondary mb-3">+ Añadir educación</button>
+
+            <h3>Habilidades</h3>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Añadir habilidad">
+                <div class="mt-2">
+                    <span class="badge bg-primary me-1">JavaScript <i class="fas fa-times"></i></span>
+                    <span class="badge bg-primary me-1">React <i class="fas fa-times"></i></span>
+                    <span class="badge bg-primary me-1">Node.js <i class="fas fa-times"></i></span>
+                    <span class="badge bg-primary me-1">SQL <i class="fas fa-times"></i></span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <a href="/perfil" class="btn btn-outline-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>

@@ -12,7 +12,7 @@ from django.contrib.auth import logout
 from .forms import PublicacionForm  # Aquí se importa el formulario
 from django.shortcuts import get_object_or_404, redirect
 from .models import OfertaEmpleo
-
+from .models import Publicacion, OfertaEmpleo, BusquedaTrabajo
 
 #http://127.0.0.1:8000/
 def home(request):
@@ -33,7 +33,7 @@ def registrar_usuario(request):
 
         # Intentar crear un nuevo usuario
         try:
-            # `create_user` crea un usuario con nombre, email y contraseña en la base de datos
+            # create_user crea un usuario con nombre, email y contraseña en la base de datos
             usuario = User.objects.create_user(username=username, email=email, password=password)
             usuario.save()  # Guarda el usuario en la base de datos
             login(request, usuario)  # Inicia sesión automáticamente al usuario recién registrado
@@ -157,4 +157,7 @@ def buscar_empleo(request):
     busquedas = BusquedaTrabajo.objects.all().order_by('-fecha_busqueda')[:10]
     print(f"Búsquedas recientes: {busquedas}")
 
-    return render(request, 'jobConet_app/buscar_empleo.html', {'busquedas': busquedas})
+    return render(request, 'jobConet_app/buscarEmpleo.html', {'busquedas': busquedas})
+
+def editar_perfil(request):
+    return render(request, 'jobConet_app/editar_perfil.html')

@@ -18,12 +18,10 @@ class OfertaEmpleo(models.Model):
 
     def __str__(self):
         return self.titulo
-    
 class BusquedaTrabajo(models.Model):
-    palabra_clave = models.CharField(max_length=255, blank=True, null=True)  # Campo para "Puesto o palabra clave"
+    palabra_clave = models.CharField(max_length=255)
     ubicacion = models.CharField(max_length=255, blank=True, null=True)
     fecha_busqueda = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.palabra_clave} en {self.ubicacion}"
-
+        return f"{self.palabra_clave} - {self.ubicacion}"

@@ -116,7 +116,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'  # URL para acceder a los archivos estáticos
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
@@ -125,13 +125,10 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-LOGIN_URL = 'login'  # redirige a la vista de inicio de sesion "login"
+LOGIN_URL = 'login'  # Redirige a la vista de inicio de sesión "login"
 
 # Redirige a la página de inicio después de un login exitoso
 LOGIN_REDIRECT_URL = 'lista_publicaciones'  # Cambia 'lista_publicaciones' por el nombre de tu vista
 
 
 LOGOUT_REDIRECT_URL = 'logout'  # Redirige a la vista de login después de cerrar sesión
-
-
-STATIC_URL = '/static/'  # URL para acceder a los archivos estáticos
